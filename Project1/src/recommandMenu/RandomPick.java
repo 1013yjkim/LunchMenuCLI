@@ -39,4 +39,41 @@ public class RandomPick {
 
 		
 	}
+    	/**
+	 * 고민되는 음식 메뉴 선택지를 추가하는 메소드입니다.
+	 * @param hs main에 있는 기본 음식리스트를 저장한 테이블입니다.
+	 * @throws NotSupportedMenuCategory 현재 한식, 양식, 중식, 일식의 카테고리만 지원하므로 다른음식 카테고리를 추가하려 할 경우 예외를 반환합니다.
+	 */
+	public static void addMenu(Hashtable<String, Food> hs) throws NotSupportedMenuCategory{
+		//메뉴추가 API
+		String[] Category = {"한식", "양식", "중식", "일식"};
+		Scanner sc = new Scanner(System.in);//스캐너로 입력받기 
+		String cate = null;
+		String foodName;
+		
+		
+		System.out.println("어느 카테고리의 음식인가요?\n한식, 중식, 양식, 일식 중에 고르세요");
+		while(cate == null) {
+			cate = sc.next();
+			if(cate.equals(Category[0]) || cate.equals(Category[1]) || cate.equals(Category[2]) || cate.equals(Category[3])) {
+				String str = "┌──────────────────────┐\n"
+						+ "   음식 이름을 입력해주세요!\n"
+						+ "└──────────────────────┘\n"
+						+ "　　ᕱ ᕱ ||\n"
+						+ "　 ( ･ω･ ||\n"
+						+ "　 /　つΦ\n"
+						+ "-----------------------";
+				System.out.println(str);
+				System.out.println();
+				foodName = sc.next();
+				Food addFood = new Food(cate, foodName);
+				hs.put(addFood.foodName, addFood);
+				
+			}
+			else {
+				cate = null;
+				throw new NotSupportedMenuCategory();// 한식 중식 양식 일식중에고르지 ㅣ않았을때 
+			}
+		}
+	}
 }
