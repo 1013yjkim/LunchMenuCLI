@@ -90,4 +90,20 @@ public class RandomPick {
 		}
 		return c;
 	}
+    /**
+	 * 현재 음식 리스트를 보여주는 메소드입니다.
+	 * @param hs main에 있는 기본 음식리스트를 저장한 테이블입니다.
+	 */
+	public static void showFoodList(Hashtable<String, Food> hs) {
+		Object[] foodMenu = hs.keySet().toArray();
+		String str = "＿人人人人人人메뉴판人人人人人人＿\n";
+		for(int i = 0; i < hs.size(); i++) {
+			str += "＞\t"+(hs.get(foodMenu[i].toString())).getFoodName()+"\t＜\n";
+		}
+		str+= "￣^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣\n"
+				+ "   아무키. 메뉴로 돌아가기     \n"
+				+ "   9. 여기서 종료하기    \n";
+		System.out.println(str);
+				
+	}
 }
