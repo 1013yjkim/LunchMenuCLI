@@ -76,4 +76,18 @@ public class RandomPick {
 			}
 		}
 	}
+    /**
+	 * 메뉴의 숫자 또는 아무키를 선택하여 메뉴로 돌아가거나 프로그램을 종료하는 메소드입니다.
+	 * @return 종료를 선택하는 숫자나 아무키를 누른경우 1234를 반환합니다.
+	 */
+	public static int pickNum() {
+		Scanner sc = new Scanner(System.in);//스캐너로 입력받기 
+		int c;
+		try {
+			c = sc.nextInt();
+		}catch(InputMismatchException e) {
+			c = 1234;// outer else에 들어가게 하기 
+		}
+		return c;
+	}
 }
