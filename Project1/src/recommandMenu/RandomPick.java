@@ -125,4 +125,24 @@ public class RandomPick {
         str+="-----------------------------\n\n";
         System.out.println(str);
 	}
+    /**
+	 * 랜덤한 음식을 선택해 보여주는 메소드입니다.
+	 * @param hs main에 있는 기본 음식리스트를 저장한 테이블입니다.
+	 */
+	public static void pickMenu(Hashtable<String, Food> hs){
+		Object[] foodMenu = hs.keySet().toArray();
+		int menuNumber = (int)(Math.random() * hs.size() );//인덱스 넘버 랜덤선택 
+		String todayLunch =(hs.get(foodMenu[menuNumber].toString())).getFoodName();
+		
+		String str="|￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|\n"
+				+ "|    오늘의 점심메뉴는??   |\n"
+				+ "   <<"+todayLunch+">>    \n"
+				+ "|＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|\n"
+				+ "         \\ʕ •ᴥ•ʔ/\n"
+				+ "         /     \\\n"
+				+ "-----------------------------\n"
+				+ "   아무키. 메뉴로 돌아가기     \n"
+				+ "   9. 여기서 종료하기    \n";
+        System.out.println(str);
+	}
 }
