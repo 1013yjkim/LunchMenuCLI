@@ -145,4 +145,55 @@ public class RandomPick {
 				+ "   9. 여기서 종료하기    \n";
         System.out.println(str);
 	}
+    /**
+	 * 기본으로 음식 리스트를 구성하는 메서드입니다.
+	 * @return main에 기본 음식리스트를 저장한 테이블을 반환합니다.
+	 */
+	public static Hashtable<String, Food> basicMenu() {
+		Hashtable<String, Food> hs = new Hashtable<String, Food>();
+		Food ko1=new Food("한식", "불고기");
+		Food ko2=new Food("한식", "국밥");
+		Food ko3 = new Food("한식", "김치찌개");
+		
+		Food ch1 = new Food("중식", "짜장면");
+		Food ch2 = new Food("중식", "마라탕");
+		Food ch3 = new Food("중식", "마파두부");
+		
+		Food west1 = new Food("양식", "파스타");
+		Food west2 = new Food("양식", "피자");
+		Food west3 = new Food("양식", "햄버거");
+		
+		Food jp1 = new Food("일식", "초밥");
+		Food jp2 = new Food("일식", "우동");
+		Food jp3 = new Food("일식", "텐동");
+		
+		hs.put(ko1.foodName, ko1);
+		hs.put(ko2.foodName, ko2);
+		hs.put(ko3.foodName, ko3);
+		
+		hs.put(ch1.foodName, ch1);
+		hs.put(ch2.foodName, ch2);
+		hs.put(ch3.foodName, ch3);
+		
+		hs.put(jp1.foodName, jp1);
+		hs.put(jp2.foodName, jp2);
+		hs.put(jp3.foodName, jp3);
+		
+		hs.put(west1.foodName, west1);
+		hs.put(west2.foodName, west2);
+		hs.put(west3.foodName, west3);
+		
+		return hs;
+	}
+	/**
+	 * 사용자가 프로그램 종료를 선택했을 때 종료화면을 보여주는 메소드입니다.
+	 */
+	public static void quitSystem() {
+		String str = "┍━♫¸.•¨`♬ʕ ﾉ•ᴥ•ʔﾉ♫ヽʕ•ᴥ•ʔﾉ♩ヽʕ •ᴥ•ʔﾉ♬*`.♫━┑\n"
+				+ "├━♬　　　　    　•　점메추 종료 •　　　 　　   　♬━┤　\n"
+				+ "├━♬　　　　     　  맛점하세요!️　　     　　　　♬━┤　\n"
+				+ "┕━━━━━━━━━━━━━━•　♪　♬　♪　•━━━━━━━━━━━━━━━┙\n"
+				+ "";
+	System.out.println(str);
+	}
 }
