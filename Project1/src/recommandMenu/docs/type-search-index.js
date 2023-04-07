@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"recommandMenu","l":"NotSupportedMenuCategory"},{"p":"recommandMenu","l":"RandomMenuMain"},{"p":"recommandMenu","l":"RandomPick"}]
