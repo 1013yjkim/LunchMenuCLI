@@ -1,0 +1,20 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "FestivalLink_API",
+    "description" : "FestivalLink_API",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/MLP_FL/MLP_FL/1.0.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "http://localhost:9990/",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "https://api.example2.com",
+    "description" : "New Server 2"
+  } ],
+  "paths" : { },
+  "components" : { }
+}
